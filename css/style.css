@@ -47,7 +47,6 @@ body, html {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  margin-bottom: 20px;
 }
 
 .team-logo {
@@ -78,16 +77,43 @@ body, html {
 /* Sponsor carousel */
 .sponsor-carousel {
   height: 150px;
+  width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .sponsor-carousel img {
-  width: 350px;              /* larghezza fissa */
-  height: 150px;             /* altezza fissa */
-  object-fit: contain;       /* mantiene le proporzioni */
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  padding: 5px;
+  border-radius: 8px;
   transition: opacity 0.5s ease-in-out;
-  background-color: white;   /* opzionale: fondo neutro per immagini trasparenti */
-  padding: 5px;              /* opzionale: spazio interno */
+  opacity: 1;
+}
+
+/* Intervallo */
+
+.iframe-wrapper {
+  width: 500px;
+  height: 400px; /* Area visibile */
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* Internet Explorer 10+ */
+}
+
+.iframe-wrapper::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Opera */
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 600px; /* Altezza effettiva contenuto */
+  border: none;
+  pointer-events: none; /* evita interazione */
 }

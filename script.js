@@ -1,12 +1,11 @@
-const sponsors = [
+const sponsorImages = [
   "img/sponsor/Affiliazione_Logo_Oppeano.png",
-  "img/sponsor/Ballottin Luciano Sas.jpg",
   "img/sponsor/Banca_Veronese.jpg",
-  "img/sponsor/Bevande_Verona.png",
+  "img/sponsor/Doctor_Glass.jpg",
   "img/sponsor/Carpenteria_guerra.png",
   "img/sponsor/Centomo_logo.png",
   "img/sponsor/citres.png",
-  "img/sponsor/Doctor_Glass.jpg",
+  "img/sponsor/Bevande_Verona.png",
   "img/sponsor/eurospin.jpg",
   "img/sponsor/floor_green.jpg",
   "img/sponsor/green_company.jpg",
@@ -15,26 +14,67 @@ const sponsors = [
   "img/sponsor/kasba_viaggi.png",
   "img/sponsor/littelfuse.jpg",
   "img/sponsor/logistica_1.jpg",
-  "img/sponsor/Makeroni.png"
+  "img/sponsor/Makeroni.png",
+  "img/sponsor/AB.jpg",
+  "img/sponsor/Ballottin Luciano Sas.jpg"
 ];
+let index = 0;
 
-let current = 0;
+function updateSponsors() {
+  const left = document.getElementById('sponsor-left');
+  const right = document.getElementById('sponsor-right');
+  const leftMirror = document.getElementById('sponsor-left-mirror');
+  const rightMirror = document.getElementById('sponsor-right-mirror');
 
-function updateSponsorImages() {
-  const img = document.getElementById("sponsor-img");
-  const imgMirror = document.getElementById("sponsor-img-mirror");
-
-  img.style.opacity = 0;
-  imgMirror.style.opacity = 0;
+  // Fade out
+  [left, right, leftMirror, rightMirror].forEach(el => el.style.opacity = 0);
 
   setTimeout(() => {
-    img.src = sponsors[current];
-    imgMirror.src = sponsors[current];
-    img.style.opacity = 1;
-    imgMirror.style.opacity = 1;
-  }, 500);
+    const nextLeft = sponsorImages[index % sponsorImages.length];
+    const nextRight = sponsorImages[(index + 1) % sponsorImages.length];
 
-  current = (current + 1) % sponsors.length;
+    // Aggiorna immagini
+    left.src = nextLeft;
+    right.src = nextRight;
+    leftMirror.src = nextLeft;
+    rightMirror.src = nextRight;
+
+    // Fade in
+    [left, right, leftMirror, rightMirror].forEach(el => el.style.opacity = 1);
+
+    index = (index + 2) % sponsorImages.length;
+  }, 500);
 }
 
-setInterval(updateSponsorImages, 5000);
+setInterval(updateSponsors, 5000);
+
+const scrollContainerLeft = document.getElementById("scroll-container-left");
+const scrollContainerRight = document.getElementById("scroll-container-right");
+let scrollDirectionLeft = 1; // 1 = giù, -1 = su
+let scrollDirectionRight = 1; // 1 = giù, -1 = su
+
+
+function autoScroll() {
+  // Scorri di 1px ogni 30ms
+  scrollContainerLeft.scrollTop += scrollDirectionLeft;
+  scrollContainerRight.scrollTop += scrollDirectionRight;
+
+  // Quando arrivi in fondo, inverte la direzione
+  if (scrollContainerLeft.scrollTop + scrollContainerLeft.clientHeight >= scrollContainerLeft.scrollHeight) {
+    scrollDirectionLeft = -1;
+  }
+  if (scrollContainerRight.scrollTop + scrollContainerRight.clientHeight >= scrollContainerRight.scrollHeight) {
+    scrollDirectionRight = -1;
+  }
+
+  // Quando torni in cima, torna a scorrere giù
+  if (scrollContainerLeft.scrollTop <= 0) {
+    scrollDirectionLeft = 1;
+  }
+  if (scrollContainerRight.scrollTop <= 0) {
+    scrollDirectionRight = 1;
+  }
+}
+
+// Avvia lo scrolling automatico
+setInterval(autoScroll, 30);
