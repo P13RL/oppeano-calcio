@@ -13,7 +13,7 @@ const sponsors = [
   "img/sponsor/guariento_autolavaggio.png",
   "img/sponsor/immobiliare_la_corte.jpeg",
   "img/sponsor/kasba_viaggi.png",
-  "img/sponsor/littlelfuse.jpg",
+  "img/sponsor/littelfuse.jpg",
   "img/sponsor/logistica_1.jpg",
   "img/sponsor/Makeroni.png"
 ];
