@@ -78,7 +78,7 @@ body, html {
 .live-widget iframe {
   width: 100%;
   max-width: 400px;
-  width: 200px;
+  width: 275px;
   height: 150px;
   border-radius: 8px;
   background: #3247fc;
