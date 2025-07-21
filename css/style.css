@@ -35,7 +35,7 @@ body, html {
   justify-content: center;
   align-items: flex-start;
   padding-top: 2rem;
-  transform: translateX(-10%); /* sposta verso destra */
+  transform: translateX(-15%); /* sposta verso destra */
 }
 
 .content {
