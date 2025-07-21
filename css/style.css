@@ -25,7 +25,7 @@ body, html {
   justify-content: center;
   align-items: flex-start;
   padding-top: 2rem;
-  transform: translateX(0%); /* sposta verso sinistra */
+  transform: translateX(-2%); /* sposta verso sinistra */
 }
 
 .right {
