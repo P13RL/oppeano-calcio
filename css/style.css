@@ -25,7 +25,7 @@ body, html {
   justify-content: center;
   align-items: flex-start;
   padding-top: 2rem;
-  transform: translateX(-3%); /* sposta verso sinistra */
+  transform: translateX(-5%); /* sposta verso sinistra */
 }
 
 .right {
@@ -78,7 +78,7 @@ body, html {
 .live-widget iframe {
   width: 100%;
   max-width: 400px;
-  width: 275px;
+  width: 225px;
   height: 150px;
   border-radius: 8px;
   background: #3247fc;
