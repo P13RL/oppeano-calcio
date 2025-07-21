@@ -18,13 +18,24 @@ body, html {
   height: 100vh;
 }
 
-.left, .right {
+.left {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding-top: 2rem;
+  transform: translateX(-5%); /* sposta verso sinistra */
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+  transform: translateX(5%); /* sposta verso destra */
 }
 
 .content {
