@@ -61,12 +61,12 @@ body, html {
 }
 
 .team-logo {
-  width: 100px;
+  width: 125px;
   height: auto;
 }
 
 .team-logo-unmirrored {
-  width: 100px;
+  width: 125px;
   height: auto;
   transform: scaleX(1) !important;
 }
