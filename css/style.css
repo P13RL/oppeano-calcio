@@ -24,7 +24,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   transform: translateX(-5%); /* sposta verso sinistra */
 }
 
@@ -34,7 +34,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   transform: translateX(-12%); /* sposta verso destra */
 }
 
@@ -76,19 +76,15 @@ body, html {
 }
 
 .live-widget iframe {
-  width: 100%;
-  max-width: 400px;
-  width: 225px;
-  height: 150px;
-  border-radius: 8px;
-  background: #3247fc;
+  width: 400px;
+  height: 190px;
 }
 
 
 /* Sponsor carousel */
 .sponsor-carousel {
-  height: 100px;
-  width: 350px;
+  height: 130px;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,10 +92,9 @@ body, html {
 }
 
 .sponsor-carousel img {
-  width: 150px;
-  height: 100px;
+  width: 420px;
+  height: 130px;
   object-fit: contain;
-  padding: 5px;
   border-radius: 8px;
   transition: opacity 0.5s ease-in-out;
   opacity: 1;
