@@ -22,25 +22,21 @@ let index = 0;
 
 function updateSponsors() {
   const left = document.getElementById('sponsor-left');
-  const right = document.getElementById('sponsor-right');
   const leftMirror = document.getElementById('sponsor-left-mirror');
-  const rightMirror = document.getElementById('sponsor-right-mirror');
 
   // Fade out
-  [left, right, leftMirror, rightMirror].forEach(el => el.style.opacity = 0);
+  [left, leftMirror].forEach(el => el.style.opacity = 0);
 
   setTimeout(() => {
     const nextLeft = sponsorImages[index % sponsorImages.length];
-    const nextRight = sponsorImages[(index + 1) % sponsorImages.length];
 
     // Aggiorna immagini
     left.src = nextLeft;
-    right.src = nextRight;
     leftMirror.src = nextLeft;
-    rightMirror.src = nextRight;
+   // rightMirror.src = nextRight;
 
     // Fade in
-    [left, right, leftMirror, rightMirror].forEach(el => el.style.opacity = 1);
+    [left, leftMirror].forEach(el => el.style.opacity = 1);
 
     index = (index + 2) % sponsorImages.length;
   }, 500);
