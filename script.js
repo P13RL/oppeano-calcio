@@ -65,7 +65,7 @@ function updateSponsors() {
   }, 500);
 }
 
-setInterval(updateSponsors, 5000);
+setInterval(updateSponsors, 3000);
 
 const scrollContainerLeft = document.getElementById("scroll-container-left");
 const scrollContainerRight = document.getElementById("scroll-container-right");
