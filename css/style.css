@@ -96,7 +96,7 @@ body, html {
 
 .iframe-wrapper iframe {
   width: 100%;
-  height: 500px; /* Altezza effettiva contenuto */
+  height: 700px; /* Altezza effettiva contenuto */
   border: none;
   pointer-events: none; /* evita interazione */
 }
